@@ -24,5 +24,5 @@ tools:context=".ui.main.MainActivity">
         app:layout_anchor="@id/rv_notes"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@drawable/ic_add"
-        tools:ignore="ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
