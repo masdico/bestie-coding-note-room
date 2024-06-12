@@ -16,13 +16,10 @@ abstract class NoteRoomDatabase : RoomDatabase() {
         @JvmStatic
         fun getDatabase(context: Context): NoteRoomDatabase {
             return INSTANCE ?: synchronized(NoteRoomDatabase::class.java) {
-                val instance = Room.databaseBuilder(
+                Room.databaseBuilder(
                     context.applicationContext,
                     NoteRoomDatabase::class.java, "note_db"
-                ).build()
-                INSTANCE = instance
-                // return instance
-                instance
+                ).build().also { INSTANCE = it }
             }
         }
     }
